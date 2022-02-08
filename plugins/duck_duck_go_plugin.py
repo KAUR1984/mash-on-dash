@@ -23,10 +23,17 @@ class DuckDuckGoPlugin(SearchEngineScrapingPlugin):
 
         query = re.sub(' +', '+', query)
         self._url = 'https://duckduckgo.com/html/?q={}'.format(query)
-        return self._do_scraping()
+        return self._do_scraping(query)
 
-    def do_scraping(self):
+    def do_scraping(self, query):
+        """
+            Changed the method signature to include query as a parameter. TODO
 
+        :param query: query for search
+        :type query: string
+        :return: results
+        :rtype: list of dictionaries
+        """
         page = requests.get(self._url)
         if page.status_code == 200:
             soup = BeautifulSoup(page.content, 'html.parser')

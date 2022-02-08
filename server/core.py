@@ -66,6 +66,9 @@ def configure_celery(server, celery):
     celery.conf['BROKER_HEARTBEAT'] = server.config['BROKER_HEARTBEAT']
     celery.conf['CELERY_TASK_ALWAYS_EAGER'] = server.config['CELERY_TASK_ALWAYS_EAGER']
 
+    # CELERY_INCLUDE is a string of all the plugin modules found,
+    # hence, we are concatenating the new plugins found into this string.
+
     if new_plugins:
         celery.conf['CELERY_INCLUDE'] += tuple(new_plugins)
 

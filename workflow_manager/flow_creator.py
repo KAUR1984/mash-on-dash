@@ -14,7 +14,7 @@ class FlowCreator(object):
         """
             Initialize a flow with input and output workpieces.
 
-        :param input_workpiece: jobs or workflows that executing in parallel.
+        :param input_workpiece: jobs or workflows that are executing in parallel.
             This parameter is mandatory and must have at least one element.
         :type input_workpiece: list
         :param output_workpiece: jobs or workflows that executing in parallel, after execution of input workpieces

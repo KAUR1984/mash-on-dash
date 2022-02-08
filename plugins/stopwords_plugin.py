@@ -28,7 +28,7 @@ class StopwordsPlugin(FilterPlugin, Plugin):
 
     def filter(self, lst, target_key=None):
         """
-            Clears the textual data by removing the stopwords found on it
+            Clears the textual data by removing the stopwords found on it.
 
             :param lst: texts. the language of the text must be consistent with the configured language.
             :type lst: list of strings or list of dictionaries

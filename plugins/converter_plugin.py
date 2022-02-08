@@ -129,7 +129,7 @@ class ConverterPlugin(Plugin):
         if type(ls_dict) is not list:
             raise TypeError(f"Parameter 'dictionary' is of type {type(ls_dict)}. Must be type of list.")
         if type(key) is not str:
-            raise TypeError(f"Parameter 'dictionary' is of type {type(keys)}. Must be type of str.")
+            raise TypeError(f"Parameter 'dictionary' is of type {type(key)}. Must be type of str.")
         result = []
         for dictionary in ls_dict:
             if type(dictionary) is not dict:

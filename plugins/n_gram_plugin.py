@@ -5,7 +5,7 @@ from nltk import FreqDist
 
 class NGramPlugin(Plugin):
     """
-        A plugin for extract and work with n-grams
+        A plugin to extract and work with n-grams
 
     """
 

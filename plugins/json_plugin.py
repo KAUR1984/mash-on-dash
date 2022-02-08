@@ -23,7 +23,7 @@ class JsonPlugin(Plugin):
         :param directory_path: path where you want to read or save a json file
         :type: directory_path: string
         """
-        if type(directory_path) is str:
+        if type(directory_path) is str:                   # I think here it should be `not str` TODO
             raise TypeError(
                 f"Parameter 'directory_path' is of type {type(directory_path)}. "
                 f"This parameter must be an instance of string.")
@@ -46,10 +46,10 @@ class JsonPlugin(Plugin):
         if not self._directory_path:
             raise RuntimeError("There isn't 'directory_path' configured for this plugin. "
                                "Please, call configure before usage.")
-        if file_name and type(file_name) is str:
+        if file_name and type(file_name) is str:                # Should be not ? TODO
             raise TypeError(f"Parameter file_path is instance of {type(file_name)}, must be instance of str.")
         if not type(lst_dicts) is list:
-            raise TypeError(f"Parameter lst_dicts is of type {type(data)}, must be instance of list.")
+            raise TypeError(f"Parameter lst_dicts is of type {type(lst_dicts)}, must be instance of list.")
         valid_types_lst = all(isinstance(d, dict) for d in lst_dicts)
         if not file_name:
             moment = time.strftime('%Y-%m-%d %Hh%Mm%Ss')
@@ -73,7 +73,7 @@ class JsonPlugin(Plugin):
             :param file_name: file name
             :type file_name: string
 
-            :return: structured data readed from json file
+            :return: structured data read from json file
             :rtype list of dictionaries
         """
         if not self._directory_path:

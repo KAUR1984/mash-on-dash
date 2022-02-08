@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 from dash import Dash
-import dash_html_components as html
+# import dash_html_components as html
+from dash import html
 from flask import Flask
-import dash_core_components as dcc
+# import dash_core_components as dcc
+from dash import dcc
 from plotly.graph_objs import *
 
 """ 

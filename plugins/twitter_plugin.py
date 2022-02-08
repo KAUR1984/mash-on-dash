@@ -1,5 +1,5 @@
 from plugins.social_media_plugin import SocialMediaPlugin
-from tweepy import OAuthHandler, API, TweepError, RateLimitError
+from tweepy import OAuthHandler, API, TweepyException, TooManyRequests
 
 try:
     import json
@@ -16,7 +16,7 @@ class TwitterPlugin(SocialMediaPlugin):
     tokens_required = ('access_token', 'access_secret', 'consumer_key', 'consumer_secret')
 
     _twitter_instance = None
-    _expected_exception = (TweepError, RateLimitError)
+    _expected_exception = (TweepyException, TooManyRequests)              # TODO changed the imports.
 
     def configure(self, tokens):
         """
@@ -116,7 +116,7 @@ class TwitterPlugin(SocialMediaPlugin):
             self.authenticate()
         t = self._twitter_instance
 
-        tweets = t.search(q=query, lang='en', count=count, tweet_mode='extended')
+        tweets = t.search_tweets(q=query, lang='en', count=count, tweet_mode='extended')     #TODO replaced `search` with `search_tweets`
         for tweet in tweets:
             if only_text:
                 results.append(tweet.full_text.replace("\n", ""))
@@ -165,7 +165,7 @@ class TwitterPlugin(SocialMediaPlugin):
             return []
         t = self._twitter_instance
         for page in self._paginate(ids, 90):
-            result = t.statuses_lookup(page, tweet_mode='extended')
+            result = t.lookup_statuses(page, tweet_mode='extended')           #TODO replaced `statuses_lookup` with `lookup_statuses`.
             if rt:
                 total_result += [r._json for r in result]
             else:

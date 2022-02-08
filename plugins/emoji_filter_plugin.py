@@ -58,7 +58,7 @@ class EmojiFilterPlugin(FilterPlugin, Plugin):
     def extract_emojis(self, text):
         """
             Extract the emoji sequences from the text.
-            Suports emojis with different skin colors tones, flags and ZWJ sequences of emojis.
+            Support emojis with different skin colors tones, flags and ZWJ sequences of emojis.
 
         :param text: text to filter emojis, if they exist
         :type text: string

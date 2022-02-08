@@ -41,7 +41,7 @@ class DandelionPlugin(ApiPlugin):
 
             From the website:  this API you will be able to automatically tag your texts,
             extracting Wikipedia entities and enriching your data.
-            Free plan alows 1.000/day requests per day (~30.000/month).
+            Free plan allows 1.000/day requests per day (~30.000/month).
 
             :param text: text that will be analyzed. mandatory.
             :type text: string

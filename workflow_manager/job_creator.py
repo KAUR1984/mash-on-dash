@@ -29,6 +29,7 @@ class JobCreator(object):
                 f"Parameter 'plugin' is of type {type(plugin)}. A valid <PluginEnum> instance is expected. ")
 
         # get an instance of plugin by plugin name
+
         module_name = get_module_plugin_name(plugin.name)
         try:
             module = importlib.import_module(module_name)
@@ -59,7 +60,7 @@ class JobCreator(object):
         Optional configurations:
             key: 'input_expected'. value type: bool
             description: a boolean that indicates whether or not that job depends on a future entry to run.
-            Default value is True. If this configurantion is not present, the default value is considered.
+            Default value is True. If this configuration is not present, the default value is considered.
 
             Example: { 'method_name': 'add_numbers', 'args': [1,2] }
 

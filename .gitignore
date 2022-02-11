@@ -130,3 +130,4 @@ Temporary Items
 
 # Project-specific
 /venv/
+__pycache__

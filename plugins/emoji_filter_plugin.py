@@ -1,7 +1,7 @@
 from .filter_plugin import FilterPlugin
 from workflow_manager.plugin import Plugin
 import unicodedata
-import emoji
+# import emoji
 import regex
 
 
@@ -71,16 +71,16 @@ class EmojiFilterPlugin(FilterPlugin, Plugin):
         list_words = text.split()
 
         # regex for flags
-        flags = regex.findall(u'[\U0001F1E6-\U0001F1FF]+', text)
-        for word in list_words:
-            if any(char in emoji.UNICODE_EMOJI for char in word):
+        # flags = regex.findall(u'[\U0001F1E6-\U0001F1FF]+', text)
+        # for word in list_words:
+        #     if any(char in emoji.UNICODE_EMOJI for char in word):
                 # clears characters that are neither emoji nor codepoint for skintone
                 # ("Emoji Modifier Fitzpatrick Type-1-2") and neither "Zero Width Joiner" character
-                only_emojis = ''.join([c if c in emoji.UNICODE_EMOJI or unicodedata.name(c).startswith(
-                    "EMOJI MODIFIER") or unicodedata.name(c) == 'ZERO WIDTH JOINER' else ' '
-                                       for c in word])
-                list_emojis = only_emojis.split()
-                emoji_sequences += list_emojis
-        return emoji_sequences + flags
+                # only_emojis = ''.join([c if c in emoji.UNICODE_EMOJI or unicodedata.name(c).startswith(
+                #     "EMOJI MODIFIER") or unicodedata.name(c) == 'ZERO WIDTH JOINER' else ' '
+                #                        for c in word])
+                # list_emojis = only_emojis.split()
+                # emoji_sequences += list_emojis
+        # return emoji_sequences + flags
 
 

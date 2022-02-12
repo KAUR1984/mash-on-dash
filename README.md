@@ -36,19 +36,27 @@ understanding of scope of interest.
 
 - **Installation instructions (OSX)**:
     - Install all the above mentioned libraries in your virtual environment using `pip` package manager.
+      <br>
+      <br>
     - *Note* - In case you are facing an error - `ModuleNotFoundError: No module named 'eventlet'`, then run `pip install eventlet`.
-    - Inside the 
-
-
-
-
-
-
-
-
+      <br>
+      <br>
+    - Open the terminal inside the project's root directory:<br><br>
+      - Command to start redis service: `sudo service redis-server start`. For OSX, please refer to this github gist - 
+        https://gist.github.com/tomysmile/1b8a321e7c58499ef9f9441b2faa0aa8
+        <br>
+        <br>
+      - Command to start celery worker: `celery -A workflow_manager.celery_worker.celery worker --loglevel=info -P eventlet`
+        <br>
+        <br>
+      - Command to delete all messages from worker: `celery -A workflow_manager.celery_worker.celery purge -f`
+        <br>
+        <br>
+      - Command to start the web application: `python cli.py`   
+  
 
 **Inspirations**: TrendsMap, Zapier, IFTTT, Mentionlytics, Intel mash maker, Karma, Wordpress.
 
-Forked from - https://github.com/willsimoes/projeto-final 
+**Forked from** - https://github.com/willsimoes/projeto-final 
 
 

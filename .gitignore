@@ -131,3 +131,4 @@ Temporary Items
 # Project-specific
 /venv/
 __pycache__
+dump.rdb

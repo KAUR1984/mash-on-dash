@@ -130,6 +130,5 @@ Temporary Items
 
 # Project-specific
 /venv/
-__pycache__
+__pycache__/
 dump.rdb
-plugins/utils/__pycache__

@@ -132,3 +132,4 @@ Temporary Items
 /venv/
 __pycache__
 dump.rdb
+plugins/utils/__pycache__

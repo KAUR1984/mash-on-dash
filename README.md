@@ -26,7 +26,8 @@ understanding of scope of interest.
 
 - **Packages used**: 
     - *Ntlk* - Processing library of natural language in english text. Used for analysis of the language and data mining.
-    - *Tweepy* - Encapsulates the use of Twitter API for data retrieval.
+    - *Tweepy* - Encapsulates the use of Twitter API for data retrieval. For this functionality to work, might need to 
+      create twitter access tokens from twitter developer platform.
     - *Flask* - a micro-framework that provides the main features for web development.
     - *Dash framework* - A plotly framework for creating visualisation and interactive web applications.
     - *Beautiful Soup* - Screen scraping.

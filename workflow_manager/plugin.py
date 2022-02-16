@@ -8,7 +8,7 @@ class Plugin(celery.Task):
         and runs a specific method of a plugin, with given arguments.
 
         If you want create a new plugin, it's mandatory extend this class.
-        All plugins must be extends this class.
+        All material-dashboard-plugins must be extends this class.
 
         This class extends a base class Task from Celery and override the run function,
         where based on arguments and keyword arguments passed for plugin (task),

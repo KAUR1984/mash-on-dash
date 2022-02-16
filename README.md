@@ -33,7 +33,8 @@ understanding of scope of interest.
     - *Beautiful Soup* - Screen scraping.
     - *Celery* - For asynchronous queue management.
     - *Redis* - an open source, in-memory data structure store which is used as a database cache and message broker.
-    - *Emoji* - Emoji for python : `pip install emoji --upgrade`
+    - *Emoji* - Emoji for python : `pip install emoji --upgrade`.
+    - *Npm* - Might need to install npm in your environment using `npm install`.
       
 
 - **Installation instructions (OSX)**:

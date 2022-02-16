@@ -67,7 +67,7 @@ def configure_celery(server, celery):
     celery.conf['CELERY_TASK_ALWAYS_EAGER'] = server.config['CELERY_TASK_ALWAYS_EAGER']
 
     # CELERY_INCLUDE is a string of all the plugin modules found,
-    # hence, we are concatenating the new plugins found into this string.
+    # hence, we are concatenating the new material-dashboard-plugins found into this string.
 
     if new_plugins:
         celery.conf['CELERY_INCLUDE'] += tuple(new_plugins)
@@ -107,7 +107,7 @@ def configure_logging(debug=False):
 
 
 def register_plugin_tasks(celery):
-    """ Register all plugins as task for celery """
+    """ Register all material-dashboard-plugins as task for celery """
     lst_plugins = get_plugins_modules()
     if new_plugins:
         lst_plugins += new_plugins

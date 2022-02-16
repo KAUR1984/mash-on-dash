@@ -33,9 +33,9 @@ def joined_lower_to_camel_case(string):
 
 
 def get_plugins_modules():
-    """In the plugins folder, search for all plugins models
+    """In the material-dashboard-plugins folder, search for all material-dashboard-plugins models
 
-    :return list of plugins models
+    :return list of material-dashboard-plugins models
     :rtype list of strings """
     base_package = plugins.__name__
     plugin_modules = []

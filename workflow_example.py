@@ -5,7 +5,7 @@ from plugins.enum.plugins_enum import PluginsEnum
 from plugins.utils.tokens_keys import TWITTER_TOKENS
 
 
-# from plugins.file_utils_plugin import FileUtilsPlugin
+# from material-dashboard-plugins.file_utils_plugin import FileUtilsPlugin
 
 
 def execute_workflow_1():

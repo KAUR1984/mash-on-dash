@@ -14,7 +14,7 @@ logger = logging.getLogger()
 
 @bp.route('/')
 def view_base():
-    return "Home"
+    return render_template('index.html')
 
 
 @bp.route('/smm')

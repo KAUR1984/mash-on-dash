@@ -3,8 +3,7 @@ from enum import Enum
 
 class PluginsEnum(Enum):
     """
-        Enum where all existing material-dashboard-plugins are listed
-
+        Enum where all existing plugins are listed
     """
     BingPlugin = 1,
     CsvPlugin = 2,

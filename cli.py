@@ -4,7 +4,7 @@ import sys
 """ Cli interface for starting app """
 
 # Command for start redis service:
-#               sudo service redis-server start OR brew services start redis (on mac)
+#               sudo service redis-server start OR brew services start redis (on Mac)
 # Command for start celery worker:
 #               celery -A workflow_manager.celery_worker.celery worker --loglevel=info -P eventlet
 # Command for delete all messages from worker:

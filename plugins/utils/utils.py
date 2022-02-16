@@ -8,13 +8,10 @@ import pkgutil
 
 def camel_case_to_joined_lower(string):
     """Receives a string in CamelCase and returns it in joined_lower
-
     :param string: string in camel case
     :type string: string
-
     :return: string in joined lower
     :rtype: string
-
     """
     to_joined_lower = ('_' + char if char.isupper() and i != 0 else char for i, char in enumerate(string))
     return ''.join(to_joined_lower).lower()
@@ -22,10 +19,8 @@ def camel_case_to_joined_lower(string):
 
 def joined_lower_to_camel_case(string):
     """Receives a string in joined_lower and returns it in CamelCase
-
     :param string: string in joined lower
     :type string
-
     :return string in camel case
     :rtype string
     """
@@ -33,9 +28,8 @@ def joined_lower_to_camel_case(string):
 
 
 def get_plugins_modules():
-    """In the material-dashboard-plugins folder, search for all material-dashboard-plugins models
-
-    :return list of material-dashboard-plugins models
+    """In the plugins folder, search for all plugins models
+    :return list of plugins models
     :rtype list of strings """
     base_package = plugins.__name__
     plugin_modules = []
@@ -48,10 +42,8 @@ def get_plugins_modules():
 def get_module_plugin_name(class_name):
     """
         Given the name of the plugin class, it takes the name of its module
-
     :param class_name: class name of the plugin
     :type class_name: string
-
     :return: module name of the plugin
     :rtype: string
     """
